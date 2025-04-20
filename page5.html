@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Explore New Ideas - IdeaNest</title>
+  <link rel="stylesheet" href="page5.css">
+</head>
+<body>
+
+    <div class="navbar">
+        <div class="logo">IdeaNest</div>
+        <div>
+          <a href="page1.html">Home</a>
+          <a href="#">Logout</a>
+        </div>
+      </div>
+
+  <div class="main-heading">
+    <h1>Explore New Ideas</h1>
+    <p>Discover trending startup ideas and connect with visionary founders.</p>
+  </div>
+
+  <div class="tag-filter">
+    <select id="tagSelect">
+      <option value="all">All Tags</option>
+      <option value="ai">AI</option>
+      <option value="education">Education</option>
+      <option value="energy">Energy</option>
+      <option value="fintech">FinTech</option>
+      <option value="health">Health</option>
+    </select>
+  </div>
+
+  <div class="card-grid" id="cardGrid">
+    <div class="card" data-tag="ai">
+      <img src="ideaNest.png" alt="StartupSync">
+      <h2>IdeaNest</h2>
+      <div class="tag-label">AI</div>
+      <p>AI-powered platform for validating startup ideas and finding co-founders.</p>
+      <a href="#" class="know-more">Know More</a>
+    </div>
+
+    <div class="card" data-tag="education">
+      <img class="edutech" src="EduTech.png" alt="EduTech">
+      <h2>EduTech</h2>
+      <div class="tag-label">Education</div>
+      <p>Revolutionizing learning with personalized AI tutors and smart content delivery.</p>
+      <a href="page12.html" class="know-more">Know More</a>
+    </div>
+
+    <div class="card" data-tag="energy">
+      <img src="greenEnergy.png" alt="GreenEnergy">
+      <h2>GreenEnergy</h2>
+      <div class="tag-label">Energy</div>
+      <p>Sustainable energy systems with smart grid tech and low-cost solutions.</p>
+      <a href="#" class="know-more">Know More</a>
+    </div>
+
+    <div class="card" data-tag="fintech">
+      <img src="finTrack.png" alt="FinTrack">
+      <h2>FinTrack</h2>
+      <div class="tag-label">FinTech</div>
+      <p>Empowers users to manage money better with AI-driven financial planning tools.</p>
+      <a href="#" class="know-more">Know More</a>
+    </div>
+
+    <div class="card" data-tag="health">
+      <img src="wellnessAI.png" alt="WellnessAI">
+      <h2>WellnessAI</h2>
+      <div class="tag-label">Health</div>
+      <p>Real-time health coach using wearable data and AI for lifestyle improvement.</p>
+      <a href="#" class="know-more">Know More</a>
+    </div>
+
+    <div class="card" data-tag="ai">
+      <img src="PitchPal.png" alt="PitchPal">
+      <h2>PitchPal</h2>
+      <div class="tag-label">AI</div>
+      <p>Generate stunning pitch decks in minutes with GPT-powered automation tools.</p>
+      <a href="#" class="know-more">Know More</a>
+    </div>
+  </div>
+
+  <script>
+    const tagSelect = document.getElementById('tagSelect');
+    const cards = document.querySelectorAll('.card');
+
+    tagSelect.addEventListener('change', function () {
+      const selectedTag = this.value;
+      cards.forEach(card => {
+        if (selectedTag === 'all' || card.dataset.tag === selectedTag) {
+          card.classList.remove('hidden');
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,95 @@
+    * {
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      margin: 0;
+      background: #f9f9f9;
+      padding: 0;
+    }
+
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: #fff;
+        padding: 15px 40px;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+      }
+    
+      .navbar .logo {
+        font-size: 24px;
+        font-weight: bold;
+        color: #2563eb;
+      }
+    
+      .navbar a {
+        text-decoration: none;
+        color: #333;
+        font-weight: 500;
+        margin-left: 20px;
+      }
+    
+      .navbar a:hover {
+        color: #2563eb;
+      }
+
+    main {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    p {
+      color: #555;
+    }
+
+    .filters {
+      margin: 20px 0;
+      display: flex;
+      gap: 15px;
+    }
+
+    select, .paid-badge {
+      padding: 8px 12px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background: #fff;
+      cursor: pointer;
+    }
+
+    .professional-card {
+      background: #fff;
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+    }
+
+    .professional-card h3 {
+      margin-top: 0;
+    }
+
+    .view-profile {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    .view-profile:hover {
+      background-color: #0056b3;
+    }
+  

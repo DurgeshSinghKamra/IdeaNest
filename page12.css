@@ -1,0 +1,144 @@
+/* Reset and base */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    background-color: #f7f9fc;
+    color: #333;
+  }
+  
+  h1, h2 {
+    color: #1a1a1a;
+  }
+  
+  p, ul {
+    text-align: justify;
+  }
+  
+  ul {
+    padding-left: 1.2rem;
+  }
+  
+  /* Navbar */
+  .navbar {
+    background-color: white;
+    padding: 15px 30px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.06);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: #1a73e8;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+  }
+  
+  .nav-links li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+  }
+  
+  .nav-links li a:hover {
+    color: #1a73e8;
+  }
+  
+  /* Container */
+  .container {
+    max-width: 800px;
+    margin: 30px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  }
+  
+  .idea-title {
+    font-size: 32px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  /* Sections */
+  .section {
+    margin-bottom: 30px;
+  }
+  
+  .section h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+  
+  /* Engagement Section */
+  .engagement {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .engagement-box {
+    background: #eef3fd;
+    padding: 15px 20px;
+    border-radius: 10px;
+    flex: 1;
+    min-width: 280px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  }
+  
+  .engagement-box button {
+    margin-top: 10px;
+    background-color: #1a73e8;
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  
+  .engagement-box button:hover {
+    background-color: #1559c1;
+  }
+  
+  /* Comments */
+  .comment-input {
+    margin-top: 15px;
+    display: flex;
+    gap: 10px;
+  }
+  
+  .comment-input input {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+  }
+  
+  /* Connect Button */
+  .connect-container {
+    text-align: center;
+    margin-top: 40px;
+  }
+  
+  .connect-btn {
+    background-color: #1a73e8;
+    color: white;
+    padding: 12px 30px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  
+  .connect-btn:hover {
+    background-color: #0f5dc2;
+  }
+  

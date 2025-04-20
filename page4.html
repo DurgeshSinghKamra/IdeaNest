@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Track Progress - IdeaNest</title>
+  <link rel="stylesheet" href="page4.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <div class="logo">IdeaNest</div>
+    <div class="nav-links">
+      <a href="page1.html">Home</a>
+      <a href="#">Logout</a>
+    </div>
+  </div>
+
+  <!-- Main Container -->
+  <div class="container">
+    <h2>Track Your Progress</h2>
+    <p>Monitor milestones and upload relevant documents for your startup idea.</p>
+
+    <div class="progress-section">
+      <div class="checklist">
+        <label><input type="checkbox" checked disabled> <strong>Checklist</strong></label>
+        <label><input type="checkbox" checked> Define the problem</label>
+        <label><input type="checkbox"> Conduct market research</label>
+        <label><input type="checkbox"> Build a prototype</label>
+        <label><input type="checkbox"> Launch a minimum viable product</label>
+      </div>
+
+      <div class="notes">
+        <label><strong>Progress Notes</strong></label>
+        <textarea placeholder="Write about your progress..."></textarea>
+        <button class="btn" onclick="saveNotes()">Save</button>
+      </div>
+    </div>
+
+    <div class="upload-box">
+      <h3>Documents</h3>
+      <div class="upload-area" onclick="uploadDocuments()">
+        <div style="font-size: 28px;">📁</div>
+        <div>Upload documents</div>
+      </div>
+    </div>
+
+    <button class="your-ideas-btn" onclick="goToIdeas()">Your Ideas</button>
+  </div>
+
+  <!-- JS -->
+  <script>
+    function saveNotes() {
+      const notes = document.querySelector("textarea").value;
+      if (!notes.trim()) {
+        alert("Please write something about your progress.");
+        return;
+      }
+      alert("Progress saved successfully! 🚀");
+    }
+
+    function uploadDocuments() {
+      alert("Document upload feature coming soon!");
+    }
+
+    document.querySelector('.your-ideas-btn').addEventListener('click', function () {
+          window.location.href = 'page6.html';
+        });
+  </script>
+
+</body>
+</html>

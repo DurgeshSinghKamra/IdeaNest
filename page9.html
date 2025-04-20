@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pitch Deck Generator - IdeaNest</title>
+  <link rel="stylesheet" href="page9.css">
+</head>
+<body>
+
+    <div class="navbar">
+        <div class="logo">IdeaNest</div>
+        <div>
+          <a href="page1.html">Home</a>
+          <a href="#">Logout</a>
+        </div>
+      </div>
+
+  <main>
+    <h1>Pitch Deck Generator</h1>
+    <p>
+      Your pitch deck will be automatically generated based on your submitted <strong>Startup Idea</strong> and the <strong>Progress</strong> you have made so far.
+      <br><br>
+      We will craft a professional pitch highlighting your vision, milestones, and growth potential.
+    </p>
+
+    <button onclick="generatePitch()">Generate Pitch Deck</button>
+
+    <div class="output" id="outputSection">
+      <h3>Pitch Deck is being generated...</h3>
+      <p>Hang tight! We'll prepare a customized deck based on your details.</p>
+    </div>
+  </main>
+
+  <script>
+    function generatePitch() {
+      const output = document.getElementById('outputSection');
+      output.style.display = 'block';
+    }
+  </script>
+
+</body>
+</html>

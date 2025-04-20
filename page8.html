@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Connect with Professionals - IdeaNest</title>
+  <link rel="stylesheet" href="page8.css">
+</head>
+<body>
+
+    <div class="navbar">
+        <div class="logo">IdeaNest</div>
+        <div>
+          <a href="page1.html">Home</a>
+          <a href="#">Logout</a>
+        </div>
+      </div>
+
+  <main>
+    <h1>Connect with Professionals</h1>
+    <p>Get <strong>expert</strong> guidance and support for your business.</p>
+
+    <div class="filters">
+      <select id="categorySelect" onchange="filterProfessionals()">
+        <option value="All">All Categories</option>
+        <option value="Business">Business Consultant</option>
+        <option value="Marketing">Marketing Expert</option>
+        <option value="Tech">Tech Advisor</option>
+        <option value="Finance">Finance Consultant</option>
+      </select>
+      <div class="paid-badge">Paid</div>
+    </div>
+
+    <div id="professionalsContainer">
+      <!-- Profiles will be inserted here by JS -->
+    </div>
+  </main>
+
+  <script>
+    const professionals = [
+      {
+        name: 'John Smith',
+        category: 'Business',
+        title: 'Business Consultant',
+        description: 'John has 15 years of experience helping startups streamline operations and scale efficiently.'
+      },
+      {
+        name: 'Samantha Lee',
+        category: 'Marketing',
+        title: 'Marketing Expert',
+        description: 'Samantha specializes in digital marketing strategies and brand development for early-stage companies.'
+      },
+      {
+        name: 'David Kim',
+        category: 'Tech',
+        title: 'Tech Advisor',
+        description: 'David provides technical guidance on software architecture, scalability, and product engineering.'
+      },
+      {
+        name: 'Anita Desai',
+        category: 'Finance',
+        title: 'Finance Consultant',
+        description: 'Anita helps startups manage funding rounds, financial modeling, and investor relations.'
+      }
+    ];
+
+    const container = document.getElementById('professionalsContainer');
+
+    function renderProfessionals(category = 'All') {
+      container.innerHTML = '';
+      const filtered = category === 'All' ? professionals : professionals.filter(p => p.category === category);
+      filtered.forEach(pro => {
+        const card = document.createElement('div');
+        card.className = 'professional-card';
+        card.innerHTML = `
+          <h3>${pro.name}</h3>
+          <p><strong>${pro.title}</strong></p>
+          <p>${pro.description}</p>
+          <button class="view-profile">View Profile</button>
+        `;
+        container.appendChild(card);
+      });
+    }
+
+    function filterProfessionals() {
+      const selected = document.getElementById('categorySelect').value;
+      renderProfessionals(selected);
+    }
+
+    // Initial render
+    renderProfessionals();
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Idea Details - IdeaNest</title>
+  <link rel="stylesheet" href="page7.css" />
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">IdeaNest</div>
+        <div>
+          <a href="page1.html">Home</a>
+          <a href="#">Logout</a>
+        </div>
+      </div>
+
+  <main>
+    <h1>Explore Your Idea</h1>
+    <section class="idea-section">
+      <h2 id="idea-title">AI-Powered Learning Assistant</h2>
+      
+      <div class="progress-report">
+        <h3>Progress Report</h3>
+        <ul id="progress-texts">
+          <li>Defined the problem clearly for high school students</li>
+          <li>Uploaded first prototype wireframe</li>
+        </ul>
+        <div id="progress-docs">
+          <p class="bold">Uploaded Documents:</p>
+          <ul>
+            <li><a href="#">prototype_v1.pdf</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="add-progress">
+        <h3>Add More Progress</h3>
+        <textarea id="new-progress" placeholder="Describe your update..."></textarea>
+        <input type="file" id="doc-upload" />
+        <button onclick="addProgress()">Add Progress</button>
+      </div>
+    </section>
+
+    <section class="features">
+      <div class="card">
+        <h3>Connect with Similar Founders</h3>
+        <p>See others working on related ideas and collaborate.</p>
+        <button class="js-page10">Connect</button>
+      </div>
+
+      <div class="card">
+        <h3>Pitch Deck Generator</h3>
+        <p>Create compelling pitch decks tailored for your startup.</p>
+        <button class="js-page9">Generate</button>
+      </div>
+      
+      <div class="card">
+        <h3>Connect with a Professional</h3>
+        <p>Book sessions with mentors, advisors, and professionals.</p>
+        <button class="js-page8">Find a Pro</button>
+      </div>
+
+      <div class="card">
+        <h3>Chance to Pitch</h3>
+        <p>Apply to pitch your idea at real startup events.</p>
+        <button class="js-page11">Apply</button>
+      </div>
+    </section>
+  </main>
+
+  <script >
+    function addProgress() {
+        const progressText = document.getElementById("new-progress").value;
+        const docFile = document.getElementById("doc-upload").files[0];
+    
+        if (progressText) {
+        const li = document.createElement("li");
+        li.textContent = progressText;
+        document.getElementById("progress-texts").appendChild(li);
+        document.getElementById("new-progress").value = "";
+        }
+    
+        if (docFile) {
+        const docList = document.querySelector("#progress-docs ul");
+        const docItem = document.createElement("li");
+        const link = document.createElement("a");
+        link.href = "#";
+        link.textContent = docFile.name;
+        docItem.appendChild(link);
+        docList.appendChild(docItem);
+        document.getElementById("doc-upload").value = "";
+        }
+    }
+
+        document.querySelector('.js-page8').addEventListener('click', function () {
+        window.location.href = 'page8.html';
+        });
+
+        document.querySelector('.js-page9').addEventListener('click', function () {
+        window.location.href = 'page9.html';
+        });
+
+        document.querySelector('.js-page10').addEventListener('click', function () {
+        window.location.href = 'page10.html';
+        });
+
+        document.querySelector('.js-page11').addEventListener('click', function () {
+          window.location.href = 'page11.html';
+        });
+  </script>
+</body>
+</html>

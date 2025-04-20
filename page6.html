@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>IdeaNest Ideas</title>
+  <link rel="stylesheet" href="page6.css" />
+</head>
+<body>
+  <div class="navbar">
+    <div class="logo">IdeaNest</div>
+    <div>
+      <a href="page1.html">Home</a>
+      <a href="#">Logout</a>
+    </div>
+  </div>
+
+  <main>
+    <h1>Your Ideas</h1>
+
+    <a href="page7.html" class="idea-card">
+      <h2>Idea Title</h2>
+      <p>Short description of the idea goes here.</p>
+      <div class="meta">
+        <span class="date">Apr 15, 2025</span>
+        <span class="tag private">Private</span>
+      </div>
+    </a>
+
+    <a href="page7.html" class="idea-card">
+      <h2>Another Idea</h2>
+      <p>Short description of the idea goes here.</p>
+      <div class="meta">
+        <span class="date">Apr 10, 2025</span>
+        <span class="tag public">Public</span>
+      </div>
+      <div class="stats">
+        <span>📊 210</span>
+        <span>💬 34</span>
+        <span>❤️ 18</span>
+      </div>
+    </a>
+
+    <a href="page7.html" class="idea-card">
+      <h2>Third Idea</h2>
+      <p>Short description of the idea goes here.</p>
+      <div class="meta">
+        <span class="date">Apr 5, 2025</span>
+        <span class="tag public">Public</span>
+      </div>
+      <div class="stats">
+        <span>💬 5 comments</span>
+      </div>
+    </a>
+
+    <div class="add-button-container">
+      <button id="newIdeaBtn">Add a New Idea</button>
+    </div>
+  </main>
+
+  <script>
+    document.getElementById('newIdeaBtn').addEventListener('click', function () {
+  window.location.href = 'page2.html';
+});
+
+  </script>
+</body>
+</html>

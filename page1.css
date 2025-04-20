@@ -1,0 +1,102 @@
+body {
+    margin: 0;
+    font-family: "Segoe UI", sans-serif;
+    background: #f9fbff;
+    color: #1a1a1a;
+  }
+  
+  .navbar {
+    background: #ffffff;
+    padding: 20px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+  }
+  
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #2b2bff;
+  }
+  
+  .logo span {
+    color: #1a1a1a;
+  }
+  
+  .navbar nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+  }
+  
+  .Login {
+    padding: 10px 20px;
+    background: #2b63f7;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  .hero {
+    text-align: center;
+    padding: 80px 20px 40px;
+    background: #eaf2ff;
+  }
+  
+  .hero h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+  
+  .hero h1 span {
+    color: #2b63f7;
+  }
+  
+  .hero p {
+    font-size: 18px;
+    color: #444;
+    line-height: 1.5;
+    margin-bottom: 30px;
+  }
+  
+  .btn-secondary {
+    padding: 12px 24px;
+    background: #2b63f7;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  .features-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    padding: 60px 40px;
+  }
+  
+  .feature-card {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    width: 280px;
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  }
+  
+  .feature-card .icon {
+    font-size: 40px;
+    margin-bottom: 15px;
+  }
+  

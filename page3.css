@@ -1,0 +1,117 @@
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f3f6f9;
+      color: #222;
+    }
+
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: #fff;
+        padding: 15px 40px;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+      }
+    
+      .navbar .logo {
+        font-size: 24px;
+        font-weight: bold;
+        color: #2563eb;
+      }
+    
+      .navbar a {
+        text-decoration: none;
+        color: #333;
+        font-weight: 500;
+        margin-left: 20px;
+      }
+    
+      .navbar a:hover {
+        color: #2563eb;
+      }
+
+    header {
+      background-color: #2563eb;
+      color: white;
+      padding: 30px 20px;
+      text-align: center;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    }
+    .container {
+      padding: 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .section {
+      background: white;
+      margin-bottom: 25px;
+      border-radius: 10px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+      padding: 25px;
+    }
+    h2 {
+      color: #2563eb;
+      margin-bottom: 10px;
+    }
+    .ai-tag {
+      font-style: italic;
+      font-size: 0.9em;
+      color: #777;
+      margin-bottom: 15px;
+      text-align: right;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+    table, th, td {
+      border: 1px solid #ddd;
+    }
+    th, td {
+      padding: 10px;
+      text-align: left;
+    }
+    .chart {
+      width: 100%;
+      max-width: 700px;
+      display: block;
+      margin: 20px auto;
+    }
+    ul, ol {
+      padding-left: 20px;
+    }
+    .credits {
+      font-size: 0.85em;
+      text-align: center;
+      color: #555;
+      padding: 20px 0;
+    }
+    .credits a {
+      color:#2563eb;
+      text-decoration: none;
+    }
+    .collapsed p,
+    .collapsed ul,
+    .collapsed ol,
+    .collapsed table,
+    .collapsed img {
+      display: none;
+    }
+
+    .trp {
+        display: block;
+        margin: 40px auto 0;
+        padding: 14px 30px;
+        font-size: 16px;
+        background-color: #2563eb;
+        color: white;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+      }

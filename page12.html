@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Idea Details - IdeaNest</title>
+  <link rel="stylesheet" href="page12.css" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">IdeaNest</div>
+    <ul class="nav-links">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Logout</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main Container -->
+  <div class="container">
+    <h1 class="idea-title">EduTech</h1>
+
+    <section class="section">
+      <h2>About the Idea</h2>
+      <p>
+        EduTech aims to revolutionize learning with personalized AI tutors, smart content delivery, and adaptive feedback mechanisms tailored for students of all levels.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2>Progress</h2>
+      <ul>
+        <li>✅ MVP built and tested with 100+ students</li>
+        <li>✅ Partnership with 2 schools</li>
+        <li>🚧 Mobile app in development</li>
+      </ul>
+    </section>
+
+    <section class="section engagement">
+      <div class="engagement-box">
+        <strong>👍 Upvotes:</strong> <span id="upvotes">245</span>
+        <button id="like-btn">Like</button>
+      </div>
+
+      <div class="engagement-box">
+        <strong>💬 Comments:</strong>
+        <ul id="comment-list">
+          <li>“Great potential for rural education.”</li>
+          <li>“Would love to integrate it with my school!”</li>
+        </ul>
+
+        <div class="comment-input">
+          <input type="text" id="new-comment" placeholder="Write a comment..." />
+          <button onclick="addComment()">Post</button>
+        </div>
+      </div>
+    </section>
+
+    <div class="connect-container">
+      <button class="connect-btn" onclick="connectFounder()">Connect with Founder</button>
+    </div>
+  </div>
+
+  <script >
+    // Like logic
+let upvotes = 245;
+const upvoteElement = document.getElementById("upvotes");
+const likeBtn = document.getElementById("like-btn");
+
+likeBtn.addEventListener("click", () => {
+  upvotes++;
+  upvoteElement.textContent = upvotes;
+  likeBtn.disabled = true;
+  likeBtn.textContent = "Liked!";
+});
+
+// Comment logic
+function addComment() {
+  const input = document.getElementById("new-comment");
+  const list = document.getElementById("comment-list");
+  const text = input.value.trim();
+
+  if (text !== "") {
+    const li = document.createElement("li");
+    li.textContent = text;
+    list.appendChild(li);
+    input.value = "";
+  }
+}
+
+// Connect logic
+function connectFounder() {
+  alert("You've sent a connection request to the founder!");
+}
+
+  </script>
+</body>
+</html>

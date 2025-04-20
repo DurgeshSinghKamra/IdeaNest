@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Submit Idea - IdeaNest</title>
+  <link rel="stylesheet" href="page2.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <div class="logo">IdeaNest</div>
+    <div>
+      <a href="page1.html">Home</a>
+      <a href="#">Logout</a>
+    </div>
+  </div>
+
+  <!-- Form Container -->
+  <div class="container">
+    <h2>Submit Your Startup Idea</h2>
+    <p>You can quickly save a brief idea or submit a detailed version for analysis.</p>
+
+    <!-- Brief Submission -->
+    <div class="section">
+      <h3>Brief Submission</h3>
+      <div class="form-group">
+        <label for="brief-idea">Your Idea</label>
+        <textarea id="brief-idea" placeholder="Summarize your startup idea..."></textarea>
+      </div>
+      <button class="btn" onclick="saveBrief()">Save</button>
+      
+      <a href="page3.html"><button class="btn" onclick="analyzeBrief()">Submit & Analyze</button>
+      </div></a>  x
+
+    <div class="section-divider"></div>
+
+    <!-- Detailed Submission -->
+    <div class="section">
+      <h3>Detailed Submission</h3>
+      <div class="form-group">
+        <label for="detailed-idea">Idea</label>
+        <input type="text" id="detailed-idea" placeholder="What’s your startup idea?">
+      </div>
+      <div class="form-group">
+        <label for="problem">Problem it Solves</label>
+        <input type="text" id="problem" placeholder="What problem does it solve?">
+      </div>
+      <div class="form-group">
+        <label for="audience">Target Audience</label>
+        <input type="text" id="audience" placeholder="Who is it for?">
+      </div>
+      <button class="btn" onclick="submitDetailed()">Submit & Analyze</button>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script>
+    function saveBrief() {
+      const idea = document.getElementById('brief-idea').value;
+      if (!idea.trim()) {
+        alert("Please enter your idea before saving.");
+        return;
+      }
+      alert("Idea saved successfully! (Simulated)");
+    }
+
+    function submitDetailed() {
+      const idea = document.getElementById('detailed-idea').value;
+      const problem = document.getElementById('problem').value;
+      const audience = document.getElementById('audience').value;
+
+      if (!idea || !problem || !audience) {
+        alert("Please fill all fields before submitting.");
+        return;
+      }
+
+      alert("Your detailed idea has been submitted & is being analyzed. 🚀");
+    }
+  </script>
+
+</body>
+</html>
